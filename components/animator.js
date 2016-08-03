@@ -1,4 +1,4 @@
-define(['PIXI', 'core/system', 'core/component'], function(PIXI, sys, Component) {
+define(['PIXI', 'core/system', 'core/component'], function(PIXI, system, Component) {
     
     var Animator = Component.extend({
         init: function (owner, settings) {
@@ -12,7 +12,7 @@ define(['PIXI', 'core/system', 'core/component'], function(PIXI, sys, Component)
         addAnimation: function (name, settings) {
             // extract frames
             var frames = [];
-            var textures = sys.assets[this.spritesheet].textures;
+            var textures = system.assets[this.spritesheet].textures;
             for (var t in textures) {
                 if (t.indexOf(name) > -1)
                     frames.push(t);

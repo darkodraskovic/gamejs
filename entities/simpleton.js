@@ -1,5 +1,5 @@
-define(['SAT', 'core/system', 'core/entity', 'component/animator', 'component/platformer', 'core/constants'],
-       function (SAT, sys, Entity, Animator,  Platformer, constants) {
+define(['SAT', 'core/system', 'core/entity', 'components/animator', 'components/platformer', 'core/constants'],
+       function (SAT, system, Entity, Animator,  Platformer, constants) {
            
            var Simpleton = window.Simpletons.Simpleton = Entity.extend({
                init: function(layer, x, y, settings) {
@@ -31,7 +31,7 @@ define(['SAT', 'core/system', 'core/entity', 'component/animator', 'component/pl
                    kin.updateGraphics();
                    
                    // Input
-                   var input = sys.input;
+                   var input = system.input;
                    if (input.down['left']) {
                        kin.facing = kin.move = -1;
                    } else if (input.down['right']) {

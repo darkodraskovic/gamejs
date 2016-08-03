@@ -1,4 +1,4 @@
-define(['PIXI', 'core/system', 'core/container'], function(PIXI, sys, Container) {
+define(['PIXI', 'core/system', 'core/container'], function(PIXI, system, Container) {
     
     var Entity = Container.extend({
         autoCull: true,
@@ -54,8 +54,8 @@ define(['PIXI', 'core/system', 'core/container'], function(PIXI, sys, Container)
             enumerable: true,
             get: function () {
                 var bounds = this.getBounds();
-                return bounds.x + bounds.width < 0 || bounds.x > sys.renderer.width ||
-                    bounds.y + bounds.height < 0 || bounds.y > sys.renderer.height;
+                return bounds.x + bounds.width < 0 || bounds.x > system.renderer.width ||
+                    bounds.y + bounds.height < 0 || bounds.y > system.renderer.height;
             }
         }
     });

@@ -1,6 +1,6 @@
-define(['PIXI', 'SAT', 'core/system', 'core/layer', 'core/tilemap', 'config'], function(PIXI, SAT, sys, Layer, Tilemap, config) {
+define(['PIXI', 'SAT', 'core/system', 'core/layer', 'core/tilemap', 'config'], function(PIXI, SAT, system, Layer, Tilemap, config) {
 
-    var TiledManager = sys.Class.extend();
+    var TiledManager = system.Class.extend();
 
     TiledManager.prototype.makeTiledMap = function(scene, mapJson) {
         mapJson = PIXI.loader.resources[mapJson];
@@ -63,7 +63,7 @@ define(['PIXI', 'SAT', 'core/system', 'core/layer', 'core/tilemap', 'config'], f
     TiledManager.prototype.makeImageLayer = function(scene, mapData, layer) {
         var l = new Layer(scene, layer.name, layer.properties);
         var img = new PIXI.extras.TilingSprite(
-            sys.assets[layer.properties.image].texture,
+            system.assets[layer.properties.image].texture,
             mapData.width * mapData.tilewidth,
             mapData.height * mapData.tileheight
         );
@@ -96,7 +96,7 @@ define(['PIXI', 'SAT', 'core/system', 'core/layer', 'core/tilemap', 'config'], f
 
     TiledManager.prototype.prerenderTiledTileLayer = function(scene, tilemap, layer) {
         var texture = tilemap.generateTexture(
-            sys.renderer, config.renderer.resolution, PIXI.SCALE_MODES.DEFAULT);
+            system.renderer, config.renderer.resolution, PIXI.SCALE_MODES.DEFAULT);
         var renderedSprite = new PIXI.Sprite(texture);
         tilemap.removeChildren();
         tilemap.addChild(renderedSprite);

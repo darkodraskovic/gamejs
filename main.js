@@ -17,11 +17,8 @@ require.config({
     }
 });
 
-requirejs(['core/application', 'scenes/scene1', 'core/system',
-           'entities/namespace', 'entities/platform', 'entities/simpleton', 'entities/staticArea'],
-          function(Application, Scene, sys) {
-
-              var app = new Application();
-              var scene = new Scene();
+requirejs(['core/application', 'scenes/scene1'], function(Application, Scene) {
+    var app = new Application();
+    var scene = new Scene();
 });
 

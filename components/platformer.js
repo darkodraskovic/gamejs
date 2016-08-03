@@ -1,4 +1,4 @@
-define(['SAT', 'core/system', 'component/kinematics'], function(SAT, sys, Kinematics) {
+define(['SAT', 'core/system', 'components/kinematics'], function(SAT, system, Kinematics) {
     var Platformer = Kinematics.extend({
         init: function (owner, settings) {
             this._super(owner, settings);
@@ -87,8 +87,8 @@ define(['SAT', 'core/system', 'component/kinematics'], function(SAT, sys, Kinema
                     // make entity slide
                     var lerp = absTheta.lerp(0, Math.PI/2, 0, 1);
                     grav = this._vector.copy(grav).projectN(N).perp().scale(-Math.sign(crossNG));
-                    this.x += grav.x * sys.dt * lerp;
-                    this.y += grav.y * sys.dt * lerp;
+                    this.x += grav.x * system.dt * lerp;
+                    this.y += grav.y * system.dt * lerp;
                     if (ascending) {
                         vel.project(N).perp().scale(-Math.sign(crossNG));
                     }

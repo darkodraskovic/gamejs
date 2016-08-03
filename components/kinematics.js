@@ -1,4 +1,4 @@
-define(['PIXI', 'SAT', 'component/collider'], function(PIXI, SAT, Collider) {
+define(['PIXI', 'SAT', 'components/collider'], function(PIXI, SAT, Collider) {
 
     var Kinematics = Collider.extend({
         init: function (owner, settings) {

@@ -1,4 +1,4 @@
-define(['PIXI', 'SAT', 'core/system', 'core/component'], function(PIXI, SAT, sys, Component) {
+define(['PIXI', 'SAT', 'core/component'], function(PIXI, SAT, Component) {
     
     var Collider = Component.extend({
         collidesOffscreen: false,

@@ -1,4 +1,4 @@
-define(['component/projectile'], function(Projectile) {
+define(['components/projectile'], function(Projectile) {
     
     var Vehicle = Projectile.extend({
         init: function (owner, settings) {

@@ -1,22 +1,22 @@
 define(['PIXI', 'core/system', 'core/input', 'core/tiledManager', 'config'],
-       function(PIXI, sys, Input, TiledManager, config) {
+       function(PIXI, system, Input, TiledManager, config) {
     
-    var Application = sys.Class.extend({
+    var Application = system.Class.extend({
         init: function (screenSize, rendererOptions) {
-            sys.app = this;
+            system.app = this;
             
             screenSize = screenSize || config.screen;
             rendererOptions = rendererOptions || config.renderer;
-            sys.renderer = this.renderer = PIXI.autoDetectRenderer(
+            system.renderer = this.renderer = PIXI.autoDetectRenderer(
                 screenSize.width , screenSize.height,
                 rendererOptions
             );
             document.body.appendChild(this.renderer.view);
             
-            sys.loader = this.loader = PIXI.loader;
-            sys.assets = this.assets = this.loader.resources;
-            sys.input = this.input = new Input();
-            sys.tiledManager = this.tiledManager = new TiledManager();
+            system.loader = this.loader = PIXI.loader;
+            system.assets = this.assets = this.loader.resources;
+            system.input = this.input = new Input();
+            system.tiledManager = this.tiledManager = new TiledManager();
         },
         update: function () {
             requestAnimationFrame(this.update.bind(this));
@@ -26,7 +26,7 @@ define(['PIXI', 'core/system', 'core/input', 'core/tiledManager', 'config'],
             var dt = now - this.time;
             this.time = now;
             this.dt = dt / 1000;
-            sys.dt = this.dt;
+            system.dt = this.dt;
 
             var scene = this.scene;
             if (scene) {
