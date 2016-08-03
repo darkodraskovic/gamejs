@@ -1,10 +1,12 @@
 requirejs(
-    ['core/game', 'core/application', 'core/scene', 'core/layer'],
-    function(Game, Application, Scene, Layer) {
+    ['core/game', 'core/application', 'core/scene', 'core/layer', 'core/entity', 'component/vehicle'],
+    function(Game, Application, Scene, Layer, Entity, Component) {
         
-        var app = new Application();
-        var scene = new Scene();
-        var layer = new Layer(scene, 'layer');
-        app.start(scene);
+        // var app = new Application();
+        // var scene = new Scene();
+        // var layer = new Layer(scene, 'layer');
+        // var entity = new Entity(layer, 0, 0, {'name': 'entity1'});
+        // entity.collider = new Component(entity);
+        // app.start(scene);
         
     });

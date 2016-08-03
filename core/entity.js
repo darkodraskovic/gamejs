@@ -49,7 +49,7 @@ define(['PIXI', 'core/game', 'core/container'], function(PIXI, Game, Container) 
         }
     });
 
-    Object.defineProperties(Game.Entity.prototype, {
+    Object.defineProperties(Entity.prototype, {
         'offscreen': {
             enumerable: true,
             get: function () {
@@ -59,5 +59,6 @@ define(['PIXI', 'core/game', 'core/container'], function(PIXI, Game, Container) 
             }
         }
     });
-    
+
+    return Entity;
 });

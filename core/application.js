@@ -1,4 +1,4 @@
-define(['PIXI', 'core/game', 'core/input', 'utils/tiledManager', 'config'],
+define(['PIXI', 'core/game', 'core/input', 'core/tiledManager', 'config'],
        function(PIXI, Game, Input, TiledManager, config) {
     
     var Application = Game.Class.extend({
