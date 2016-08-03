@@ -1,4 +1,4 @@
-define(['PIXI', 'core/game'], function(PIXI, Game) {
+define(['PIXI', 'SAT', 'core/game', 'core/layer', 'core/tilemap'], function(PIXI, SAT, Game, Layer, Tilemap) {
 
     var TiledManager = Game.Class.extend();
 
@@ -51,7 +51,7 @@ define(['PIXI', 'core/game'], function(PIXI, Game) {
             });
         }
         
-        var tilemap = new Game.Tilemap(scene, layer.name, settings);
+        var tilemap = new Tilemap(scene, layer.name, settings);
         
         if (tilemap.prerender) {
             tilemap = this.prerenderTiledTileLayer(scene, tilemap, layer);
@@ -61,7 +61,7 @@ define(['PIXI', 'core/game'], function(PIXI, Game) {
     };
 
     TiledManager.prototype.makeImageLayer = function(scene, mapData, layer) {
-        var l = new Game.Layer(scene, layer.name, layer.properties);
+        var l = new Layer(scene, layer.name, layer.properties);
         var img = new PIXI.extras.TilingSprite(
             Game.assets[layer.properties.image].texture,
             mapData.width * mapData.tilewidth,
@@ -71,7 +71,7 @@ define(['PIXI', 'core/game'], function(PIXI, Game) {
     };
 
     TiledManager.prototype.makeTiledObjectGroup = function(scene, layer) {
-        var l = new Game.Layer(scene, layer.name, layer.properties);
+        var l = new Layer(scene, layer.name, layer.properties);
         layer.objects.forEach(function(obj) {
             var poly;
             if (obj.polygon) {

@@ -1,4 +1,4 @@
-define(['SAT', 'component/kinematics'], function(SAT, Kinematics) {
+define(['SAT', 'core/game', 'component/kinematics'], function(SAT, Game, Kinematics) {
     var Platformer = Kinematics.extend({
         init: function (owner, settings) {
             this._super(owner, settings);
