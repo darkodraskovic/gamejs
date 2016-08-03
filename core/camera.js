@@ -1,6 +1,6 @@
-define(['core/game', 'config'], function(Game, config) {
+define(['core/system', 'config'], function(sys, config) {
 
-    var Camera = Game.Class.extend({
+    var Camera = sys.Class.extend({
         init: function(scene, entity, settings) {
             this.settings = settings || config.cam;
             

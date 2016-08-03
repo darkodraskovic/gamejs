@@ -1,5 +1,5 @@
-define(['core/game'], function(Game) {
-    var Component = Game.Class.extend({
+define(['core/system'], function(sys) {
+    var Component = sys.Class.extend({
         init: function (owner, settings) {
             for (var prop in settings) {
                 this[prop] = settings[prop];

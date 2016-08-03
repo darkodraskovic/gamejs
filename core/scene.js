@@ -1,6 +1,6 @@
 define(
-    ['PIXI', 'core/game', 'core/container', 'core/pool', 'core/collider', 'core/camera'],
-    function(PIXI, Game, Container, Pool, Collider, Camera) {
+    ['PIXI', 'core/system', 'core/container', 'core/pool', 'core/collider', 'core/camera'],
+    function(PIXI, sys, Container, Pool, Collider, Camera) {
         
         var Scene = Container.extend({
             init: function(name, settings) {
@@ -22,7 +22,7 @@ define(
                 var bindings = this.bindings;
                 if (bindings) {
                     for (var i = 0; i < bindings.length; i += 2) {
-                        Game.input.bind(bindings[i], Game.Key[bindings[i+1]]);
+                        sys.input.bind(bindings[i], sys.Key[bindings[i+1]]);
                     }
                 }
 
@@ -32,14 +32,14 @@ define(
                 // assets
                 var assets = this.assets;
                 if (assets) {
-                    var loader = Game.loader;
+                    var loader = sys.loader;
                     for (i = 0; i < assets.length; i += 2) {
                         loader.add(assets[i], assets[i+1]);
                     }
                     loader.once('complete',function() {
-                        Game.tiledManager.makeTiledMap(this, this.map);
+                        sys.tiledManager.makeTiledMap(this, this.map);
                         this.onAssetsLoaded();
-                        Game.app.start(this);
+                        sys.app.start(this);
                     }.bind(this));
                     loader.load();            
                 }

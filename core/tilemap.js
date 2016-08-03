@@ -1,10 +1,10 @@
-define(['PIXI', 'core/game', 'core/layer', 'core/tile'], function(PIXI, Game, Layer, Tile) {
+define(['PIXI', 'core/system', 'core/layer', 'core/tile'], function(PIXI, sys, Layer, Tile) {
 
     var Tilemap = Layer.extend({
         init: function (scene, name, settings) {
             this._super(scene, name, settings);
 
-            this.image = Game.assets[this.tileset].texture;
+            this.image = sys.assets[this.tileset].texture;
             this.imgCols = this.image.width / this.tileW;
             this.imgRows = this.image.height / this.tileH;
 

@@ -1,12 +1,12 @@
-define(['PIXI', 'SAT', 'core/game', 'core/component'], function(PIXI, SAT, Game, Component) {
+define(['PIXI', 'SAT', 'core/system', 'core/component'], function(PIXI, SAT, sys, Component) {
     
-    Game.CollisionType = {
+    sys.CollisionType = {
         SENSOR: 0,
         STATIC: 1,
         DYNAMIC: 2
     };
 
-    Game.CollisionGroup = {
+    sys.CollisionGroup = {
         NONE: 0,
         PLAYER: 1,
         FRIEND: 2,

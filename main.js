@@ -1,6 +1,6 @@
 requirejs(
-    ['core/game', 'core/application', 'core/scene', 'core/layer', 'core/entity', 'component/vehicle'],
-    function(Game, Application, Scene, Layer, Entity, Component) {
+    ['core/application', 'core/scene', 'core/layer', 'core/entity', 'component/vehicle'],
+    function(Application, Scene, Layer, Entity, Component) {
         
         var app = new Application();
         var scene = new Scene();

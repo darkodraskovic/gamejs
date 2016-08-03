@@ -1,8 +1,8 @@
-define(['core/game'], function(Game) {
+define(['core/system'], function(sys) {
     
     // ==============================
     // KEYBOARD
-    var Input = Game.Class.extend({
+    var Input = sys.Class.extend({
         init: function() {
             this.actions = {};
             this.pressed = {};

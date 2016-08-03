@@ -1,6 +1,6 @@
-define(['core/game'], function(Game) {
+define(['core/system'], function(sys) {
 
-    var Pool = Game.Class.extend({
+    var Pool = sys.Class.extend({
         init: function() {
             this.pools = {};
         },
