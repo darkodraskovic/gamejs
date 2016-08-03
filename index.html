@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <title>Game</title>
+        <style>
+         body {
+             margin: 0;
+             padding: 0;
+             background-color: #000000;
+         }
+        </style>
+
+        <script data-main="main" src="lib/require.js"></script>
+        <script>
+         require.config({
+             baseUrl: "./",
+             
+             paths: {
+                 "underscore": "lib/underscore",
+                 "PIXI": "lib/pixi",
+                 "SAT": "lib/SAT",
+                 "Quadtree": "lib/quadtree",
+             },
+
+             shim: {
+                 "Quadtree": {
+                     exports: 'Quadtree'
+                 }
+             }
+         });
+        </script>    
+    </head>
+    <body>
+
+    </body>
+</html>
