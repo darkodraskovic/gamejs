@@ -1,19 +1,5 @@
 define(['PIXI', 'SAT', 'core/system', 'core/component'], function(PIXI, SAT, sys, Component) {
     
-    sys.CollisionType = {
-        SENSOR: 0,
-        STATIC: 1,
-        DYNAMIC: 2
-    };
-
-    sys.CollisionGroup = {
-        NONE: 0,
-        PLAYER: 1,
-        FRIEND: 2,
-        ENEMY: 4,
-        OTHER: 8
-    };
-
     var Collider = Component.extend({
         collidesOffscreen: false,
         type: 0,

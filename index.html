@@ -13,26 +13,6 @@
         </style>
 
         <script data-main="main" src="lib/require.js"></script>
-        <script>
-         require.config({
-             baseUrl: "./",
-             
-             paths: {
-                 "PIXI": "lib/pixi",
-                 "SAT": "lib/SAT",
-                 "Quadtree": "lib/quadtree"
-             },
-
-             shim: {
-                 "SAT": {
-                     exports: 'SAT'
-                 },
-                 "Quadtree": {
-                     exports: 'Quadtree'
-                 }
-             }
-         });
-        </script>    
     </head>
     <body>
 

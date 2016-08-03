@@ -1,0 +1,52 @@
+{"frames": {
+
+"earth_flat_00.png":
+{
+	"frame": {"x":0,"y":0,"w":256,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":128},
+	"sourceSize": {"w":256,"h":128}
+},
+"earth_flat_01.png":
+{
+	"frame": {"x":256,"y":0,"w":256,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":128},
+	"sourceSize": {"w":256,"h":128}
+},
+"earth_flat_02.png":
+{
+	"frame": {"x":512,"y":0,"w":256,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":128},
+	"sourceSize": {"w":256,"h":128}
+},
+"earth_flat_03.png":
+{
+	"frame": {"x":768,"y":0,"w":256,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":128},
+	"sourceSize": {"w":256,"h":128}
+},
+"earth_slope_01.png":
+{
+	"frame": {"x":1024,"y":0,"w":256,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":128},
+	"sourceSize": {"w":256,"h":128}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "platforms.png",
+	"format": "RGBA8888",
+	"size": {"w":1280,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5e0eab0cd47748d6b2e85c81d677ba3e:710203843253d66718cd469cb0b5e1aa:ec9392705195bb6ee1aa4d72e9f3e713$"
+}
+}

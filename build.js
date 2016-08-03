@@ -21,6 +21,7 @@
     out: "game.js",
 
     // namespace: 'Game',
+    wrap: true,
     
     optimize: "none",
     include: ["requireLib"]

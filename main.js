@@ -1,5 +1,28 @@
+require.config({
+    baseUrl: "./",
+    
+    paths: {
+        "PIXI": "lib/pixi",
+        "SAT": "lib/SAT",
+        "Quadtree": "lib/quadtree"
+    },
+
+    shim: {
+        "SAT": {
+            exports: 'SAT'
+        },
+        "Quadtree": {
+            exports: 'Quadtree'
+        }
+    }
+});
+
 requirejs(
     [
+        'SAT',
+        
+        'core/constants',
+        
         'core/class',
         'core/system',
         
@@ -22,8 +45,14 @@ requirejs(
         'component/platformer',
         'component/projectile',
         'component/vehicle',
+
+        'config',
     ],
     function(
+        SAT,
+        
+        constants,
+        
         Class,
         sys,
         
@@ -45,9 +74,17 @@ requirejs(
         Kinematics,
         Platformer,
         Projectile,
-        Vehicle
+        Vehicle,
+
+        config
     ) {
-        Game = {};
+        window.SAT = SAT;
+        
+        var Game = window.Game = {};
+
+        for (var c in constants) {
+            Game[c] = constants[c];
+        }
         
         Game.Class = Class;
         Game.sys = sys;
@@ -72,4 +109,7 @@ requirejs(
         Game.components.Platformer = Platformer;
         Game.components.Projectile = Projectile;
         Game.components.Vehicle = Vehicle;        
+
+        Game.config = config;
     });
+
