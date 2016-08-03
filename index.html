@@ -18,13 +18,15 @@
              baseUrl: "./",
              
              paths: {
-                 "underscore": "lib/underscore",
                  "PIXI": "lib/pixi",
                  "SAT": "lib/SAT",
-                 "Quadtree": "lib/quadtree",
+                 "Quadtree": "lib/quadtree"
              },
 
              shim: {
+                 "SAT": {
+                     exports: 'SAT'
+                 },
                  "Quadtree": {
                      exports: 'Quadtree'
                  }
