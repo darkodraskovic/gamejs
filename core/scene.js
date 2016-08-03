@@ -1,6 +1,6 @@
 define(
-    ['PIXI', 'core/system', 'core/container', 'core/pool', 'core/collider', 'core/camera'],
-    function(PIXI, sys, Container, Pool, Collider, Camera) {
+    ['PIXI', 'core/system', 'core/container', 'core/pool', 'core/collider', 'core/camera', 'core/constants'],
+    function(PIXI, sys, Container, Pool, Collider, Camera, constants) {
         
         var Scene = Container.extend({
             init: function(name, settings) {
@@ -22,7 +22,7 @@ define(
                 var bindings = this.bindings;
                 if (bindings) {
                     for (var i = 0; i < bindings.length; i += 2) {
-                        sys.input.bind(bindings[i], sys.Key[bindings[i+1]]);
+                        sys.input.bind(bindings[i], constants.keys[bindings[i+1]]);
                     }
                 }
 
