@@ -1,7 +1,7 @@
-define(['PIXI', 'core/system', 'core/Input', 'core/TiledManager', 'config'],
-       function(PIXI, system, Input, TiledManager, config) {
+define(['PIXI', 'core/Class', 'core/system', 'core/Input', 'core/TiledManager', 'config'],
+       function(PIXI, Class, system, Input, TiledManager, config) {
     
-    var Application = system.Class.extend({
+    var Application = Class.extend({
         init: function (screenSize, rendererOptions) {
             system.app = this;
             

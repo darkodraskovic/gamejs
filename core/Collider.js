@@ -1,6 +1,6 @@
-define(['PIXI', 'SAT', 'Quadtree','core/system'], function(PIXI, SAT, Quadtree, system) {
+define(['PIXI', 'SAT', 'Quadtree','core/Class'], function(PIXI, SAT, Quadtree, Class) {
     
-    var Collider = system.Class.extend({
+    var Collider = Class.extend({
         init: function(scene) {
             this.colliders = [];
             this.response = new SAT.Response();

@@ -1,6 +1,6 @@
-define(['PIXI', 'SAT', 'core/system', 'core/Layer', 'core/Tilemap', 'config'], function(PIXI, SAT, system, Layer, Tilemap, config) {
+define(['PIXI', 'SAT', 'core/Class', 'core/system', 'core/Layer', 'core/Tilemap', 'config'], function(PIXI, SAT, Class, system, Layer, Tilemap, config) {
 
-    var TiledManager = system.Class.extend();
+    var TiledManager = Class.extend();
 
     TiledManager.prototype.makeTiledMap = function(scene, mapJson) {
         mapJson = PIXI.loader.resources[mapJson];

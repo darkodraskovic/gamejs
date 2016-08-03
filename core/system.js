@@ -33,9 +33,7 @@ define(['PIXI', 'core/Class'], function(PIXI, Class) {
     };
 
     //==========================
-    
-    var system = {};
-    system.Class = Class;
 
+    var system = {};
     return system;
 });

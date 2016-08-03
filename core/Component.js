@@ -1,5 +1,5 @@
-define(['core/system'], function(system) {
-    var Component = system.Class.extend({
+define(['core/Class'], function(Class) {
+    var Component = Class.extend({
         init: function (owner, settings) {
             for (var prop in settings) {
                 this[prop] = settings[prop];

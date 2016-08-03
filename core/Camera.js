@@ -1,6 +1,6 @@
-define(['core/system', 'config'], function(system, config) {
+define(['core/Class', 'config'], function(Class, config) {
 
-    var Camera = system.Class.extend({
+    var Camera = Class.extend({
         init: function(scene, entity, settings) {
             this.settings = settings || config.cam;
             
