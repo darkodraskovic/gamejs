@@ -1,4 +1,4 @@
-define(['core/scene', 'gamespace',
+define(['core/scene',
         'entities/platform',
         'entities/simpleton',
         'entities/staticArea'],
