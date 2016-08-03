@@ -1,4 +1,4 @@
-define(['PIXI', 'core/container'], function(PIXI, Container) {
+define(['PIXI', 'core/Container'], function(PIXI, Container) {
     var Layer = Container.extend({
         init: function(scene, name, settings) {
             this._super(settings);

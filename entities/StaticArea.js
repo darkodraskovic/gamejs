@@ -1,4 +1,4 @@
-define(['core/entity', 'components/collider', 'core/constants'], function (Entity, Collider, constants) {
+define(['core/Entity', 'components/Collider', 'core/constants'], function (Entity, Collider, constants) {
     var StaticArea = window.Simpletons.StaticArea = Entity.extend({
         init: function(layer, x, y, settings) {
             this._super(layer, x, y, settings);

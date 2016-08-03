@@ -1,4 +1,4 @@
-define(['PIXI', 'core/system', 'core/layer', 'core/tile'], function(PIXI, system, Layer, Tile) {
+define(['PIXI', 'core/system', 'core/Layer', 'core/Tile'], function(PIXI, system, Layer, Tile) {
 
     var Tilemap = Layer.extend({
         init: function (scene, name, settings) {

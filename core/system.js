@@ -1,4 +1,4 @@
-define(['PIXI', 'core/class'], function(PIXI, Class) {
+define(['PIXI', 'core/Class'], function(PIXI, Class) {
 
     //=========================
     

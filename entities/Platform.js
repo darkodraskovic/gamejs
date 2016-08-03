@@ -1,4 +1,4 @@
-define(['PIXI', 'core/entity'], function (PIXI, Entity) {
+define(['PIXI', 'core/Entity'], function (PIXI, Entity) {
     var Platform = window.Simpletons.Platform = Entity.extend({
         init: function(layer, x, y, settings) {
             this._super(layer, x, y, settings);

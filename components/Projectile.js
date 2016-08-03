@@ -1,4 +1,4 @@
-define(['components/kinematics'], function(Kinematics) {
+define(['components/Kinematics'], function(Kinematics) {
     
     var Projectile = Kinematics.extend({
         init: function (owner, settings) {

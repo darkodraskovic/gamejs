@@ -1,4 +1,4 @@
-define(['SAT', 'core/system', 'core/entity', 'components/animator', 'components/platformer', 'core/constants'],
+define(['SAT', 'core/system', 'core/Entity', 'components/Animator', 'components/Platformer', 'core/constants'],
        function (SAT, system, Entity, Animator,  Platformer, constants) {
            
            var Simpleton = window.Simpletons.Simpleton = Entity.extend({

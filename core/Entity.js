@@ -1,4 +1,4 @@
-define(['PIXI', 'core/system', 'core/container'], function(PIXI, system, Container) {
+define(['PIXI', 'core/system', 'core/Container'], function(PIXI, system, Container) {
     
     var Entity = Container.extend({
         autoCull: true,

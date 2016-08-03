@@ -1,4 +1,4 @@
-define(['PIXI', 'core/system', 'core/component'], function(PIXI, system, Component) {
+define(['PIXI', 'core/system', 'core/Component'], function(PIXI, system, Component) {
     
     var Animator = Component.extend({
         init: function (owner, settings) {

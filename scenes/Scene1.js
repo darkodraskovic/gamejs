@@ -1,7 +1,7 @@
-define(['core/scene',
-        'entities/platform',
-        'entities/simpleton',
-        'entities/staticArea'],
+define(['core/Scene',
+        'entities/Platform',
+        'entities/Simpleton',
+        'entities/StaticArea'],
        function (Scene) {
            
            var scene1 = Scene.extend({

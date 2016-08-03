@@ -1,4 +1,4 @@
-define(['PIXI', 'core/system', 'core/input', 'core/tiledManager', 'config'],
+define(['PIXI', 'core/system', 'core/Input', 'core/TiledManager', 'config'],
        function(PIXI, system, Input, TiledManager, config) {
     
     var Application = system.Class.extend({
